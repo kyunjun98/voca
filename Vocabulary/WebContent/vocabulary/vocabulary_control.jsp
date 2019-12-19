@@ -55,6 +55,7 @@
 		// edit를 setAttribute
 		request.setAttribute("vocabularyDTO", vocabularyDTO);
 		pageContext.forward("vocabulary_view.jsp?action=edit");
+		
 	} else if(action.equals("update")) {
 
 		// 단어장 수정

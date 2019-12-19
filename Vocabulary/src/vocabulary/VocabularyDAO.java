@@ -11,7 +11,7 @@ public class VocabularyDAO {
 	PreparedStatement pstmt = null;
 
 	String jdbc_driver = "com.mysql.jdbc.Driver";
-	String jdbc_url = "jdbc:mysql://127.0.0.1/jspdb?useSSL=true&verifyServerCertificate=false&serverTimezone=UTC";
+	String jdbc_url = "jdbc:mysql://127.0.0.1/voca?useSSL=true&verifyServerCertificate=false&serverTimezone=UTC";
 	
 	/******************************************************************************************/
 	// DB연결
@@ -20,7 +20,7 @@ public class VocabularyDAO {
 		try {
 			Class.forName(jdbc_driver);
 
-			conn = DriverManager.getConnection(jdbc_url,"jspbook","1234");
+			conn = DriverManager.getConnection(jdbc_url,"voca","1234");
 		} catch (Exception e) {
 			e.printStackTrace();
 		}

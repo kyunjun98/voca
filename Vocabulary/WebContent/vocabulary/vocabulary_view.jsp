@@ -11,7 +11,6 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	<title>단어장 등록</title>
 	<link rel="stylesheet" href="vocabulary.css" type="text/css" media="screen" />
-
 	<script type="text/javascript">
 
 		// window.load는 페이지 로딩 후 실행
@@ -60,12 +59,55 @@
 <%-- 자바빈즈 사용 --%>   
 <jsp:useBean id="vocabularyDTO" scope="request" class="vocabulary.VocabularyDTO"></jsp:useBean>
 
+<!-- 기본 버튼 css -->
+<style> 
+input[type=button] {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 10px 15px 30px 16px;
+  text-decoration: none;
+  margin: 4px 2px;
+  cursor: pointer;
+  text-align: center;
+  vertical-align: middle;
+  font-weight: bold;
+}
+</style>
+
+<!-- 기본 버튼 css 끝-->
+
 <body>
+<header>
+
+	<div class="container header-container">
+	
+		<div>
+
+			<h1 class="header-logo"><a href="vocabulary_mainpage.jsp"><img src="../images/logo.jpg"></a></h1>
+
+ 		</div>
+
+	</div>
+	
+</header>
+<div id="menu1">
+	<ul>
+	<li><a href="vocabulary_word1.jsp">고교 영어1</a></li>
+	<li><a href="vocabulary_word2.jsp">고교 영어2</a></li>
+	<li><a href="vocabulary_list.jsp">단어장</a></li>
+	</ul>
+</div>
 	<div align="center">
 	<H2>단어장 등록</H2>
 	<HR>
 	
-	<a href="vocabulary_control.jsp?action=list">단어장 조회</a>
+  		<div ontouchstart="">
+  <div class="button2">
+    <a href="vocabulary_control.jsp?action=list">단어장 조회</a>
+  </div>
+</div>
+<br>
 	
 	<!-- 단어장 등록용 -->
 	<form name="form1" method="post" action=vocabulary_control.jsp>
@@ -105,6 +147,25 @@
 		</table>
 	</form>
 	</div>
+	
+<div class="content">
+
+</div>
+
+
+<footer>
+
+
+  <div class="container footer-container">
+
+	<p class="footer-copyright">
+
+		COPYRIGHT@WordBook INC. ALL RIGHTS RESERVED.
+
+		</p>
+		
+</div>
+</footer>
 
 </body>
 </html>

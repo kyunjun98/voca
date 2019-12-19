@@ -1,22 +1,24 @@
 package org.smy.Vocabulary;
 
+import java.io.BufferedReader;
 import java.io.FileInputStream;
+import java.io.InputStreamReader;
 import java.util.Scanner;
 
 import javax.swing.JOptionPane;
 /**
  * 	@fn		public class vocaword 
  * 
- *	@brief	º¯¼ö¼±¾ğ
+ *	@brief	ë³€ìˆ˜ì„ ì–¸
  *
- *	@details	´Ü¾î ÃâÁ¦¸¦ À§ÇÑ º¯¼ö ¼±¾ğ
+ *	@details	ë‹¨ì–´ ì¶œì œë¥¼ ìœ„í•œ ë³€ìˆ˜ ì„ ì–¸
  *
- *	@author	±è¼³±Ô
+ *	@author	ê¹€ì„¤ê·œ
  *	@date	2019-10-24
  
  *	@param 	String text, korean, input, count, save, test, gotword, score
  *
- *	@remark	»ó´Ü ºÎÅÍ ¶æ°ú ¿µ¾î ´Ü¾î¸¦ ÀúÀåÇÏ´Â º¯¼ö, ´Ü¾îÀÇ °³¼ö¸¦ ¼¼´Â º¯¼ö, ÃâÁ¦µÈ ´Ü¾î¸¦ ÀûÀ» º¯¼ö, Æ²¸° ´Ü¾î¸¦ ÀûÀ» º¯¼ö, ÃâÁ¦ÇÒ ´Ü¾îÀÇ º¯È£¸¦ ÀÓ½ÃÀúÀåÇÒ º¯¼ö, Æ²¸° °³¼ö¸¦ ¼¼´Â º¯¼ö [2019-10-24; ±è¼³±Ô] \n
+ *	@remark	ìƒë‹¨ ë¶€í„° ëœ»ê³¼ ì˜ì–´ ë‹¨ì–´ë¥¼ ì €ì¥í•˜ëŠ” ë³€ìˆ˜, ë‹¨ì–´ì˜ ê°œìˆ˜ë¥¼ ì„¸ëŠ” ë³€ìˆ˜, ì¶œì œëœ ë‹¨ì–´ë¥¼ ì ì„ ë³€ìˆ˜, í‹€ë¦° ë‹¨ì–´ë¥¼ ì ì„ ë³€ìˆ˜, ì¶œì œí•  ë‹¨ì–´ì˜ ë³€í˜¸ë¥¼ ì„ì‹œì €ì¥í•  ë³€ìˆ˜, í‹€ë¦° ê°œìˆ˜ë¥¼ ì„¸ëŠ” ë³€ìˆ˜ [2019-10-24; ê¹€ì„¤ê·œ] \n
  *
  */
 public class vocaword {
@@ -30,22 +32,24 @@ public class vocaword {
  /**
 	 * 	@fn		public static void main(String[] args)
 	 * 
-	 *	@brief .txt ÆÄÀÏÀ» ½ºÄµ
+	 *	@brief .txt íŒŒì¼ì„ ìŠ¤ìº”
 	 *
 	 *	@details
 	 *
-	 *	@author	±è¼³±Ô
+	 *	@author	ê¹€ì„¤ê·œ
 	 *	@date	2019-10-24
 	 
-	 *	@param 	ip ÂüÁ¶ÇÒ ÆÄÀÏ À§Ä¡
+	 *	@param 	ip ì°¸ì¡°í•  íŒŒì¼ ìœ„ì¹˜
 	 *
-	 *	@remark	Scanner s ½ºÄµµÉ ÆÄÀÏÀÇ À§Ä¡ º¯¼ö ÀúÀå [2019-10-24; ±è¼³±Ô] \n
+	 *	@remark	Scanner s ìŠ¤ìº”ë  íŒŒì¼ì˜ ìœ„ì¹˜ ë³€ìˆ˜ ì €ì¥ [2019-10-24; ê¹€ì„¤ê·œ] \n
 	 *
 	 */
  public static void main(String[] args){
   
   try{
    FileInputStream ip = new FileInputStream("./word.txt");
+   InputStreamReader inputStreamReader = new InputStreamReader(ip, "UTF-8");
+   BufferedReader bufferedReader = new BufferedReader(inputStreamReader);
    
    Scanner s = new Scanner(ip);
    
@@ -68,21 +72,21 @@ public class vocaword {
   /**
  	 * 	@fn		for(int j =0;j <count;j++), if(!(text[gotword].equalsIgnoreCase(input[gotword]))), score+=1;
  	 * 
- 	 *	@brief	¹®Á¦ÃâÁ¦
+ 	 *	@brief	ë¬¸ì œì¶œì œ
  	 *
- 	 *	@details	¹®Á¦¸¦ ÃâÁ¦ÇÏ°í ¹®Á¦¸¦ Æ²·È´Ù°í Ç¥½Ã Æ²¸° °¹¼ö Ãß°¡
+ 	 *	@details	ë¬¸ì œë¥¼ ì¶œì œí•˜ê³  ë¬¸ì œë¥¼ í‹€ë ¸ë‹¤ê³  í‘œì‹œ í‹€ë¦° ê°¯ìˆ˜ ì¶”ê°€
  	 *
- 	 *	@author	±è¼³±Ô
+ 	 *	@author	ê¹€ì„¤ê·œ
  	 *	@date	2019-10-24
  	 
  	 *	@param 	j, count, score
  	 *
- 	 *	@remark	j ¹®Á¦ º¯¼öÀ» ÀÌ¿ëÇØ ¹İº¹ count º¯¼ö¸¦ ÀÌ¿ëÇØ ÃâÁ¦µÉ ¹®Á¦ ¼ö, score Æ²¸°¹®Á¦ º¯¼ö [2019-10-24; ±è¼³±Ô] \n
+ 	 *	@remark	j ë¬¸ì œ ë³€ìˆ˜ì„ ì´ìš©í•´ ë°˜ë³µ count ë³€ìˆ˜ë¥¼ ì´ìš©í•´ ì¶œì œë  ë¬¸ì œ ìˆ˜, score í‹€ë¦°ë¬¸ì œ ë³€ìˆ˜ [2019-10-24; ê¹€ì„¤ê·œ] \n
  	 *
  	 */
   for(int j =0;j <count;j++){
    random();
-            input[gotword] = JOptionPane.showInputDialog(j+1+": "+korean[gotword]+"             Æ²¸°È½¼ö : "+score);
+            input[gotword] = JOptionPane.showInputDialog(j+1+": "+korean[gotword]+"             í‹€ë¦°íšŸìˆ˜ : "+score);
             if(!(text[gotword].equalsIgnoreCase(input[gotword]))){
              test[gotword] = true;
              score+=1;
@@ -91,49 +95,49 @@ public class vocaword {
   /**
 	 * 	@fn		for(int j=0; j<count; j++), if(test[j]), JOptionPane.showInputDialog(korean[j]+" : "+text[j]);
 	 * 
-	 *	@brief	Æ²¸° ¹®Á¦ ÃâÁ¦
+	 *	@brief	í‹€ë¦° ë¬¸ì œ ì¶œì œ
 	 *
-	 *	@details	¹®Á¦¸¦ ÃâÁ¦ÇÏ°í ¹®Á¦¸¦ Æ²·È´Ù°í Ç¥½Ã Æ²¸° °¹¼ö Ãß°¡
+	 *	@details	ë¬¸ì œë¥¼ ì¶œì œí•˜ê³  ë¬¸ì œë¥¼ í‹€ë ¸ë‹¤ê³  í‘œì‹œ í‹€ë¦° ê°¯ìˆ˜ ì¶”ê°€
 	 *
-	 *	@author	±è¼³±Ô
+	 *	@author	ê¹€ì„¤ê·œ
 	 *	@date	2019-10-24
 	 
 	 *	@param 	j, count
 	 *
-	 *	@remark	j ¹®Á¦ º¯¼öÀ» ÀÌ¿ëÇØ ¹İº¹ count º¯¼ö¸¦ ÀÌ¿ëÇØ Æ²¸° ¹®Á¦ ¼ö [2019-10-24; ±è¼³±Ô] \n
+	 *	@remark	j ë¬¸ì œ ë³€ìˆ˜ì„ ì´ìš©í•´ ë°˜ë³µ count ë³€ìˆ˜ë¥¼ ì´ìš©í•´ í‹€ë¦° ë¬¸ì œ ìˆ˜ [2019-10-24; ê¹€ì„¤ê·œ] \n
 	 *
 	 */
-  
   for(int j=0; j<count; j++){
-   if(test[j]){ 
-    for(int i =0; i<5;i++) 
-    JOptionPane.showInputDialog(korean[j]+" : "+text[j]); 
-   }
+	   if(test[j]){ 
+	    for(int i =0; i<3;i++) 
+	    JOptionPane.showInputDialog("í‹€ë¦° ë‹¨ì–´ = " + korean[j]+" : "+text[j]); 
+	   }
   }
  }
  /**
 	 * 	@fn		int got = (int)(Math.random()*count+0);
 	 * 
-	 *	@brief	¹®Á¦ ·£´ı ÃâÁ¦
+	 *	@brief	ë¬¸ì œ ëœë¤ ì¶œì œ
 	 *
-	 *	@details	·£´ıÇÏ°Ô ´Ü¾î¸¦ »Ì¾Æ³»°í, ÀÌ¹Ì ÃâÁ¦µÈ ¹øÈ£¶ó¸é ´Ù½Ã »Ì°í Áßº¹ µÈ°Ô ¾Æ´Ï¸é ÃâÁ¦ ‰ç´Ù°í Ç¥½Ã ÈÄ ÀÓ½ÃÀúÀå
+	 *	@details	ëœë¤í•˜ê²Œ ë‹¨ì–´ë¥¼ ë½‘ì•„ë‚´ê³ , ì´ë¯¸ ì¶œì œëœ ë²ˆí˜¸ë¼ë©´ ë‹¤ì‹œ ë½‘ê³  ì¤‘ë³µ ëœê²Œ ì•„ë‹ˆë©´ ì¶œì œ ë¬ë‹¤ê³  í‘œì‹œ í›„ ì„ì‹œì €ì¥
 	 *
-	 *	@author	±è¼³±Ô
+	 *	@author	ê¹€ì„¤ê·œ
 	 *	@date	2019-10-24
 	 
 	 *	@param 	count, got, save, gotword
 	 *
-	 *	@remark	 ·£´ıÇÏ°Ô ´Ü¾î¸¦ »Ì¾Æ³»°í, ÀÌ¹Ì ÃâÁ¦µÈ ¹øÈ£¶ó¸é ´Ù½Ã »Ì°í Áßº¹ µÈ°Ô ¾Æ´Ï¸é ÃâÁ¦ ‰ç´Ù°í Ç¥½Ã ÈÄ ÀÓ½ÃÀúÀå [2019-10-24; ±è¼³±Ô] \n
+	 *	@remark	 ëœë¤í•˜ê²Œ ë‹¨ì–´ë¥¼ ë½‘ì•„ë‚´ê³ , ì´ë¯¸ ì¶œì œëœ
+	 * ë²ˆí˜¸ë¼ë©´ ë‹¤ì‹œ ë½‘ê³  ì¤‘ë³µ ëœê²Œ ì•„ë‹ˆë©´ ì¶œì œ ë¬ë‹¤ê³  í‘œì‹œ í›„ ì„ì‹œì €ì¥ [2019-10-24; ê¹€ì„¤ê·œ] \n
 	 *
 	 */
  
  static void random(){
-  int got = (int)(Math.random()*count+0); //·£´ıÇÏ°Ô ´Ü¾î¸¦ »Ì¾Æ³½´Ù.
-  if(save[got]){//¸¸¾à ÀÌ¹Ì ÃâÁ¦µÈ ¹øÈ£¶ó¸é
-   random(); //´Ù½Ã ¹øÈ£¸¦ »Ì¾Æ³½´Ù
-  }else{//ÃâÁ¦µÈ ´Ü¾î°¡ ¾Æ´Ï¶ó¸é
-   save[got]=true;//ÃâÁ¦°¡ ‰ç´Ù°í Ç¥½Ã¸¦ ÇÏ°í,
-   gotword = got;//ÃâÁ¦µÉ ´Ü¾î¸¦ ÀÓ½ÃÀúÀåÇÑ´Ù.
+  int got = (int)(Math.random()*count+0); //ëœë¤í•˜ê²Œ ë‹¨ì–´ë¥¼ ë½‘ì•„ë‚¸ë‹¤.
+  if(save[got]){//ë§Œì•½ ì´ë¯¸ ì¶œì œëœ ë²ˆí˜¸ë¼ë©´
+   random(); //ë‹¤ì‹œ ë²ˆí˜¸ë¥¼ ë½‘ì•„ë‚¸ë‹¤
+  }else{//ì¶œì œëœ ë‹¨ì–´ê°€ ì•„ë‹ˆë¼ë©´
+   save[got]=true;//ì¶œì œê°€ ë¬ë‹¤ê³  í‘œì‹œë¥¼ í•˜ê³ ,
+   gotword = got;//ì¶œì œë  ë‹¨ì–´ë¥¼ ì„ì‹œì €ì¥í•œë‹¤.
   }
   return;
  }

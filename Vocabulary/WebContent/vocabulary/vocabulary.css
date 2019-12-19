@@ -33,3 +33,364 @@ input[type="submit"],[type="reset"],[type="button"] {
 	height: 25px;
 	width:80px;
 }
+body{
+  text-align:center;
+}
+
+/* 단어장 등록 버튼 */
+
+.button2{
+  position:relative;
+  display:inline-block;
+  margin:20px;
+}
+
+.button2 a{
+  color:white;
+  font-family:Helvetica, sans-serif;
+  font-weight:bold;
+  font-size:20px;
+  text-align: center;
+  text-decoration:none;
+  background-color:#42dbb7;
+  display:block;
+  position:relative;
+  padding:5px 10px;
+  
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  text-shadow: 0px 1px 0px #000;
+  filter: dropshadow(color=#000, offx=0px, offy=1px);
+  
+  -webkit-box-shadow:inset 0 1px 0 #FFE5C4, 0 10px 0 #2a9c81;
+  -moz-box-shadow:inset 0 1px 0 #FFE5C4, 0 10px 0 #2a9c81;
+  box-shadow:inset 0 1px 0 #FFE5C4, 0 10px 0 #2a9c81;
+  
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}
+
+.button2 a:active{
+  top:10px;
+  background-color:#42dbb7;
+  
+  -webkit-box-shadow:inset 0 1px 0 #FFE5C4, inset 0 -3px 0 #2a9c81;
+  -moz-box-shadow:inset 0 1px 0 #FFE5C4, inset 0 -3pxpx 0 #2a9c81;
+  box-shadow:inset 0 1px 0 #FFE5C4, inset 0 -3px 0 #2a9c81;
+}
+
+.button2:after{
+  content:"";
+  height:100%;
+  width:100%;
+  padding:4px;
+  position: absolute;
+  bottom:-15px;
+  left:-4px;
+  z-index:-1;
+  background-color:#2B1800;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}
+
+/* 상단 프로그램 다운 버튼 */
+
+.wrapper a, onclick{
+  display: block;
+  width: 200px;
+  height: 40px;
+  line-height: 40px;
+  font-size: 15px;
+  font-family: '나눔고딕';
+  text-decoration: none;
+  color: #333;
+  border: 2px solid #333;
+  letter-spacing: 0.5px;
+  text-align: center;
+  position: relative;
+  transition: all .35s;
+}
+
+.wrapper a span, onclick span{
+  position: relative;
+  z-index: 2;
+}
+
+.wrapper a:after, onclick:after{
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background: #A7C942;
+  transition: all .35s;
+}
+
+.wrapper a:hover, onclick:hover{
+  color: #fff;
+}
+
+.wrapper a:hover:after, onclick:hover:after{
+  width: 100%;
+}
+
+
+
+
+
+
+/* ========== ���� ========== */
+html, body {
+	font-size: 16px;
+	font-family:"Times New Roman";
+	color: #393939;
+	background: #efefef;
+}
+body, div, p, h1, h3, h4, ul, figure {
+	margin: 0;
+	padding: 0;
+}
+p, td, th, li {
+	line-height: 1.8;
+}
+img {
+	width: 100%;
+	height: auto;
+}
+	
+a {
+	text-decoration: none;
+}
+.container {
+	margin: 0 auto;
+	padding-left: 10px;
+	padding-right: 10px;
+	max-width: 1000px;
+}
+.img-responsive {
+	display: block;
+	max-width: 100%;
+	height: auto;
+}
+
+/* 메인페이지부분 */
+
+/*  ���� */
+main h1 {
+	margin-bottom: 1rem;
+	border-bottom: 1px dashed #c94040;
+	font-weight: normal;
+	font-size: 1.6rem;
+}
+
+
+
+/* ========== ��� ========== */
+
+
+
+	
+header {
+	background: #fff;
+	height: 100px;
+}
+
+	.header-lo {
+		list-style-type: none;
+		text-align: right;
+	}
+	.header-lo li {
+		display: inline;
+		padding: 0 1rem 0 0;
+
+	}
+	.header-lo a {
+		color: darkslategray;
+		text-decoration: none;
+	}
+
+	.header-container {
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+
+	.header-logo {
+		width: 250px;
+		height: 85px;
+		padding: 10px 0;
+	}
+	
+
+/* ========== ������̼� ========== */
+nav {
+	background: #394939;
+}
+	.navbar {
+		display: none;
+		list-style-type: none;
+	}
+	.navbar a {
+		display: block;
+		padding: 1rem ;
+		color: #fff;
+		text-decoration: none;
+	}
+
+
+	.navbar {
+		display: flex;
+	}
+	.navbar li {
+		flex: auto;
+		text-align: center;
+	}
+
+/*���μҰ� */
+	.home-mainc {
+		text-align: center;
+		font-size: 1.4rem;
+		margin-bottom:50px;
+	}
+	.home-mainc strong {
+		color: #c84040;
+	}
+
+
+	.home-mainc {
+		font-size: 2.4rem;
+	}
+
+
+
+/* ========== ����  ========== */
+main {
+	background: #fefef;
+	padding-top: 50px;
+	padding-bottom: 50px;
+	padding-left: 30px;
+	padding-right: 30px;
+}
+
+/* �׸� �Ұ� */
+.home-course {
+	display: flex;
+	flex-flow: column;
+}
+.home-course li {
+	flex: 1 1 auto;
+	margin: 0 2px 4px 2px;
+	border: solid 5px #fff;
+	list-style-type: none;
+	background: #fff;
+}
+
+.home-course {
+		flex-flow: row;
+	}
+
+.home-course a {
+	color: #393939;
+	text-decoration: none;
+}
+.home-course figure:hover {
+	opacity: 0.5;
+}
+.home-course figcaption {
+	padding: 15px 0;
+	font-size: 0.9rem;
+	font-weight: bold;
+	text-align: center;
+}
+
+
+/* ��������*/
+.home-h2 {
+
+
+	border-bottom: 1px dashed #c84040;
+	font-size: 2rem;
+
+}
+.gongjee {
+	padding: 50px;
+	border-radius: 10px;
+	background: #fff;
+}
+
+
+
+
+/* ========== Ǫ�� ========== */
+
+/* button class */
+.page {
+  width: 100vw;
+  margin-bottom: 50px;
+  display: flex;
+  justify-content: center;
+}
+
+
+/* add default color for animation start  */
+
+
+/* toggle this class */
+
+.color-bg-start {
+  background-color: salmon;
+}
+
+
+/* toggle class bg-animate-color */
+
+.bg-animate-color {
+  animation: random-bg .5s linear infinite;
+}
+
+
+/* add animation to bg color  */
+
+@keyframes random-bg {
+  from {
+    filter: hue-rotate(0);
+  }
+  to {
+    filter: hue-rotate(360deg);
+  }
+}
+
+@CHARSET "UTF-8";
+
+.content {
+    min-height: calc(100vh - 500px);
+}
+
+#menu1 {
+	background: #98E0AD;
+}
+
+#menu1 ul {
+	width: 500px;
+	margin: 0 auto;
+	overflow: hidden;
+}
+
+#menu1 ul li {
+	float: left;
+	width: 25%;
+	height: 50px;
+	line-height: 50px;
+	text-align: center;
+	background: #98E0AD;
+}
+
+#menu1 ul li a {
+	display: block;
+}
+
+#menu1 ul li a:hover{
+	background: #138535;
+	color: #fff;
+}
